@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+       .parent{
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns:  repeat(3 , 33.33%) ;
+        grid-template-rows:  100px  80px   300px 50px  ;
+        grid-template-areas: "header header header"
+                             "box1 box2 sidebar"
+                             "content-bar content-bar sidebar"
+                             "footer footer footer";
+    }
+    .div1{
+        background-color: rgb(95, 246, 107);
+        grid-area: header;
+      
+    }
+    .div2{
+        background-color: rgb(207, 227, 74);
+        grid-area: box1;
+        
+    }
+    .div3{
+        background-color: rgb(93, 102, 216);
+        grid-area: box2;
+   
+    }
+    .div4{
+        background-color: rgb(223, 127, 127);
+        grid-area: sidebar;
+        
+    }
+    .div5{
+        background-color: rgb(198, 56, 241);
+        
+        grid-area: content-bar;
+        
+    }
+    .div6{
+        background-color: rgb(229, 151, 243);
+        grid-area: footer;
+        overflow:auto;
+        resize: both;
+        cursor: zoom-out;
+       
+    }
+    p{
+        font-size: large;
+        text-align: center;
+    }
+
+  
+
+    @media screen and (max-width:768px){
+
+
+        .parent{
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns:  repeat(2 , 50%);
+        grid-template-rows:  100px  80px   300px 50px 50px  ;
+        grid-template-areas: "header header "
+                             "box1 box2 "
+                             "content-bar content-bar "
+                             "sidebar sidebar"
+                             "footer footer ";
+    }
+    .div1{
+        background-color: rgb(95, 246, 107);
+        grid-area: header;
+      
+    }
+    .div2{
+        background-color: rgb(207, 227, 74);
+        grid-area: box1;
+        
+    }
+    .div3{
+        background-color: rgb(93, 102, 216);
+        grid-area: box2;
+   
+    }
+    .div4{
+        background-color: rgb(223, 127, 127);
+        grid-area: sidebar;
+        
+    }
+    .div5{
+        background-color: rgb(198, 56, 241);
+        
+        grid-area: content-bar;
+        
+    }
+    .div6{
+        background-color: rgb(229, 151, 243);
+        grid-area: footer;
+       
+    }
+    p{
+        font-size: large;
+        text-align: center;
+    }
+
+
+
+    }
+
+
+    @media screen and (max-width:480px){
+        .parent{
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns:  repeat(1 , 100%);
+        grid-template-rows:  100px  80px  80px  300px 50px 50px  ;
+        grid-template-areas: "header  "
+                             "box1"
+                             "box2"
+                             "content-bar  "
+                             "sidebar"
+                             "footer ";
+    }
+    .div1{
+        background-color: rgb(95, 246, 107);
+        grid-area: header;
+      
+    }
+    .div2{
+        background-color: rgb(207, 227, 74);
+        grid-area: box1;
+        
+    }
+    .div3{
+        background-color: rgb(93, 102, 216);
+        grid-area: box2;
+   
+    }
+    .div4{
+        background-color: rgb(223, 127, 127);
+        grid-area: sidebar;
+        
+    }
+    .div5{
+        background-color: rgb(198, 56, 241);
+        
+        grid-area: content-bar;
+        
+    }
+    .div6{
+        background-color: rgb(229, 151, 243);
+        grid-area: footer;
+       
+    }
+    p{
+        font-size: large;
+        text-align: center;
+    }
+
+
+
+
+    }
+
+   </style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="parent">
+        <div class="div1"><p>Header <i class="fa-solid fa-house"></i></p></div>
+        <div class="div2"><p>Box 1Box 1Box 1Box 1Box 1Box 1Box 1Box 1Box 1Box 1Box 1Box 1</p></div>
+        <div class="div3"><p>Box 2</p></div>
+        <div class="div4"><p>Side bar</p></div>
+        <div class="div5"><p>Content</p></div>
+        <div class="div6"><p>Footer</p></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,433 @@
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      .parent {
+    width: 400px;
+    height: 250px;
+    margin: 0 0 70px 100px;
+    background: gray;
+    perspective: 500px;
+    transform: rotateY(45deg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    transform-style:preserve-3d;
+}
+.boxx {
+    width: 400px;
+    height: 250px;
+    background: pink;
+    padding-top: 20px;
+    transform: rotateX(68deg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="parent">
+  <div class="boxx"></div>
+</div> 
+  
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <style>
+.card {
+  width: 300px;
+  height: 300px;
+  position: relative; /* changed to relative */
+  top: 50px;
+  left: 50px;/* more accurate centering */
+  perspective: 500px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+ 
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: tomato;
+  font-size: 60px;
+  text-align: center;
+  line-height: 300px;
+  backface-visibility: hidden; /* Ensures the back face is hidden when flipped */
+}
+
+.front {
+  background-color: green;
+}
+
+.back {
+  background-color: brown;
+  transform: rotateY(180deg); /* This flips the back initially */
+}
+
+
+
+</style>
+
+<div class="card">
+  <div class="content">
+    <div class="front">Front</div>
+    <div class="back">Back</div>
+  </div>
+</div>
+
+</body>
+</html> -->
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.card {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+  background-color: #ee11ff;
+  color: aqua;
+  text-align: center;
+  font-size: 40px;
+  line-height: 150px; 
+  box-shadow: 0 0 15px brown;
+  animation-name: sample;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: background-color 1s, border-radius 1s, transform 1s;
+  transform-style: preserve-3d;  
+}
+
+
+@keyframes sample {
+  0% {
+    border-radius: 1%;
+    background-color: #ff0080; 
+    transform: rotateY(0deg) rotateX(0deg); 
+  }
+  25% {
+    border-radius: 10%;
+    background-color: #00ff00; 
+    transform: rotateY(10deg) rotateX(10deg); 
+  }
+  50% {
+    border-radius: 20%;
+    background-color: #00bfff; 
+    transform: rotateY(20deg) rotateX(20deg);
+  }
+  75% {
+    border-radius: 30%;
+    background-color: #8a2be2; 
+    transform: rotateY(30deg) rotateX(30deg);
+  }
+  100% {
+    border-radius: 40%;
+    background-color: #ff1493; 
+    transform: rotateY(40deg) rotateX(40deg); 
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="card"> Ts-Developers</div>
+  
+</body>
+</html>
+
+ -->
+
+
+
+
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Preloader Spinner with Star Effect</title>
+  <style>
+    /* The wrapper to center the spinner */
+    .preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensures the spinner stays on top of other content */
+      perspective: 800px; /* Perspective for 3D effect */
+    }
+
+    /* The actual spinner */
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 8px solid #f3f3f3; /* Light grey */
+      border-top: 8px double #3498db; /* Blue color */
+      border-radius: 50%;
+      animation: spin 1.5s linear infinite , starTrail 3s  infinite alternate; /* 3D rotation, spinning, and star effect */
+      transform-style: preserve-3d; /* Enables 3D effect */
+    }
+
+  
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* 3D rotation effect */
+    @keyframes rotate3d {
+      0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      }
+      50% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+      }
+      100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      }
+    }
+
+    /* Star trail effect for the trailing effect */
+    @keyframes starTrail {
+      0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 50px rgba(255, 255, 255, 0.7), 0 0 55px rgba(255, 255, 255, 0.3);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 100px rgba(255, 255, 255, 0.1);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+ 
+  <div class="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  
+  <div style="display: none;">
+    <h1>Welcome to My Website!</h1>
+    <p>This is the content that will appear after the preloader is hidden.</p>
+  </div>
+
+  <script>
+    // Hide the preloader once the page is fully loaded
+    window.addEventListener('load', function() {
+      document.querySelector('.preloader').style.display = 'none';
+      document.querySelector('div').style.display = 'block'; // Show the content
+    });
+  </script> 
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Colorful Dice Spinner Preloader</title>
+   <style>
+     /* The wrapper to center the spinner */
+     .preloader {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       z-index: 9999; /* Ensures the spinner stays on top of other content */
+       perspective: 800px; /* Perspective for 3D effect */
+     }
+ 
+     /* The actual dice spinner (cube) */
+     .dice {
+       width: 100px;
+       height: 100px;
+       transform-style: preserve-3d; /* Ensures the 3D effect */
+       animation: rotateDice 20s infinite linear; /* Animation for rotating the dice */
+       position: relative;
+     }
+ 
+     /* Dice faces with different colors */
+     .face {
+       position: absolute;
+       width: 200px;
+       height: 200px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 32px;
+       color: white;
+       font-weight: bold;
+     }
+ 
+     .face.front  { background-color: #7C444F; transform: translateZ(100px); } /* Muted Rose */
+    .face.back   { background-color: #9F5255; transform: rotateY(180deg) translateZ(100px); } /* Warm Brown */
+    .face.left   { background-color: #E16A54; transform: rotateY(-90deg) translateZ(100px); } /* Coral */
+    .face.right  { background-color: #F39E60; transform: rotateY(90deg) translateZ(100px); } /* Soft Orange */
+    .face.top    { background-color: #D95D39; transform: rotateX(90deg) translateZ(100px); } /* Rich Orange */
+    .face.bottom { background-color: #A34974; transform: rotateX(-90deg) translateZ(100px); } /* Deep Purple */
+ 
+
+ 
+     /* Animation for rotating the dice */
+     @keyframes rotateDice {
+       0%   { transform: rotateX(-15deg) rotateY(0deg); }
+       25%  { transform: rotateX(-15deg) rotateY(90deg); }
+       50%  { transform: rotateX(-15deg) rotateY(180deg); }
+       75%  { transform: rotateX(-15deg) rotateY(270deg); }
+       100% { transform: rotateX(-15deg) rotateY(360deg); }
+     }
+ 
+   </style>
+ </head>
+ <body>
+ 
+
+   <div class="preloader">
+     <div class="dice">
+       
+       <div class="face front">1</div>
+       <div class="face back">6</div>
+       <div class="face left">4</div>
+       <div class="face right">3</div>
+       <div class="face top">5</div>
+       <div class="face bottom">2</div>
+     </div>
+   </div>
+ 
+
+   <div style="display: none;">
+     <h1>Welcome to My Website!</h1>
+     <p>This is the content that will appear after the preloader is hidden.</p>
+   </div>
+ 
+   <!-- <script>
+     // Hide the preloader once the page is fully loaded
+     window.addEventListener('load', function() {
+       document.querySelector('.preloader').style.display = 'none';
+       document.querySelector('div').style.display = 'block'; // Show the content
+     });
+   </script> -->
+ 
+ </body>
+ </html>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

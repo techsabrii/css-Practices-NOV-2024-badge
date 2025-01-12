@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+            .parents{
+                width: 800px;
+                height: 600px;
+                display: grid;
+                grid-template-columns: repeat(3 , 150px);
+                grid-template-rows: 150px 150px ;
+                grid-gap: 10px;
+
+               
+            }
+            .items1{
+                background-color: brown;
+               
+                /* grid-area:2/2/3/3; */
+            }
+            .items2{
+                background-color: green;
+                grid-area: 1/2/2/3;
+                z-index: 1;
+             
+            }
+            .items3{
+                background-color: palevioletred;
+                /* grid-row:1/2;
+                grid-column: 2/4; */
+            }
+            .items4{
+                background-color: rgb(18, 67, 179);
+                /* grid-row:1/2;
+                grid-column: 1/4; */
+            }
+            .items5{
+                background-color: rgb(255, 221, 0);
+              
+                grid-row:1/2;
+               
+                grid-column: 3/4;
+            }
+            .items6{
+                background-color: rgb(166, 2, 191);
+         
+              
+
+             grid-row-start: 1;
+             grid-row-end: 2;
+             grid-column-start: 1;
+             grid-column-end: 3;
+
+                /* grid-row:3/4;
+                grid-column: 1/4; */
+            }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="parents">
+        <div class="items items1"> <h1>Div-1</h1></div>
+        <div class="items items2"><h1>Div-2</h1></div>
+        <div class="items items3"><h1>Div-3</h1></div>
+        <div class="items items4"><h1>Div-4</h1></div>
+        <div class="items items5"><h1>Div-5</h1></div>
+        <div class="items items6"><h1>Div-6</h1></div>
+    </div>
+
+
+    
+</body>
+</html>

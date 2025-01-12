@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Transform Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #4caf50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+          
+            transition: transform 0.5s ease;
+        }
+
+      
+        .rotateX:hover {
+            transform:  perspective(600px) rotateX(60deg);
+        }
+
+        .rotateY:hover {
+            transform: perspective(700px) rotateY(60deg);
+        }
+        
+
+      
+        .rotateZ:hover {
+            transform:  rotateZ(45deg);
+        }
+
+        
+
+
+        
+        .rotate3d:hover {
+            transform: perspective(700px) rotate3d(2, 2, 1, 60deg);
+        }
+
+    
+        .translateZ:hover {
+            transform: perspective(700px) rotateX(-80deg) translateZ(200px);
+        }
+
+  
+        .translate3d:hover {
+            transform: perspective(700px) rotateX(-80deg) translate3d(50px, 50px, 50px);
+        }
+
+
+      
+        .scaleZ:hover {
+            transform: perspective(700px)  scaleY(2) rotateX(60deg);
+        }
+      
+    
+        .scale3d:hover {
+            transform: perspective(700px) scale3d(1.5, 1.2, 1);
+        }
+
+
+
+
+        
+  
+        .perspective {
+            transform: perspective(500px) rotateY(0);
+        }
+        .perspective:hover {
+            transform: perspective(500px) rotateY(45deg);
+        }
+
+        .matrix3d {
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+        .matrix3d:hover {
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 50, 50, 0, 1);
+        }
+
+        .none {
+            transform: none;
+        }
+        .none:hover {
+            transform: scale3d(1.2, 1.2, 1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box rotateX">rotateX</div>
+    <div class="box rotateY">rotateY</div>
+    <div class="box rotateZ">rotateZ</div>
+    <div class="box rotate3d">rotate3d</div>
+    <div class="box translateZ">translateZ</div>
+    <div class="box translate3d">translate3d</div>
+    <div class="box scale3d">scale3d</div>
+    <div class="box scaleZ">scaleZ</div>
+    <div class="box perspective">perspective</div>
+    <div class="box matrix3d">matrix3d</div>
+    <div class="box none">none</div>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Transformations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      border: 2px solid #007BFF;
+    
+      font-size: 14px;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      cursor: pointer;
+    }
+
+    .rotate:hover {
+      transform: rotate(360deg);
+    }
+
+ 
+
+    .translateX:hover {
+      transform: translateX(50px);
+    }
+
+    .translateY:hover {
+      transform: translateY(50px);
+    }
+  
+         .translate:hover {
+      transform: translate(50px, 20px);
+    }
+
+  
+
+    .scaleX:hover {
+      transform: scaleX(2);
+    }
+
+    .scaleY:hover {
+      transform: scaleY(1.5);
+    }
+    
+        .scale:hover{
+      transform: scale(1.1, 1.1);
+    }
+
+    .skewX:hover {
+      transform: skewX(30deg);
+    }
+
+    .skewY:hover {
+      transform: skewY(30deg);
+    }
+    
+
+    .skew:hover {
+      transform: skew(-30deg, 30deg);
+    }
+
+    .matrix:hover {
+      transform: matrix(1, 0.5, -0.5, 1, -30, 50);
+    }
+
+    .none {
+      transform: none;
+    }
+     
+  </style>
+</head>
+<body>
+  <h1>CSS Transform: 2D Transformations</h1>
+  <p>Hover over each box to see its transformation:</p>
+  <div class="container">
+    <div class="box rotate">Rotate</div>
+    <div class="box translate">Translate</div>
+    <div class="box translateX">TranslateX</div>
+    <div class="box translateY">TranslateY</div>
+    <div class="box scale">Scale</div>
+    <div class="box scaleX">ScaleX</div>
+    <div class="box scaleY">ScaleY</div>
+    <div class="box skew">Skew</div>
+    <div class="box skewX">SkewX</div>
+    <div class="box skewY">SkewY</div>
+    <div class="box matrix">Matrix</div>
+    <div class="box none">None</div>
+  </div>
+</body>
+</html> -->
+
+
+<!-- Animation -->

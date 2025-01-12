@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Properties Examples</title>
+    <style>
+        .container {
+           background: #eee;
+           margin: 50px;
+           padding: 10px;
+           border: 3px solid brown;
+           display: flex;
+        }
+        .item {
+           color: #fff;
+           font-size: 20px;
+           font-weight: bold;
+           text-align: center;
+           padding: 10px;
+           margin: 5px;
+           
+           
+           
+        }
+
+        /* Flex-grow */
+        .container-grow {
+            
+        }
+        .item-grow-1 {
+            flex-grow:2;
+            background-color: #852b2b;
+            
+          
+        }
+        .item-grow-2 {
+           
+           flex-grow: 2;
+            background-color: #f8b400;
+           
+        }
+
+        /* Flex-shrink */
+        .container-shrink {
+          flex-wrap: wrap;
+           
+        }
+        .item-shrink-1 {
+           flex-shrink: 0;
+           flex-grow: 1;
+            background-color: #8c1c1c;
+          
+        }
+        .item-shrink-3 {
+           
+            background-color: #34b4eb;
+           
+        }
+
+        /* Flex-basis */
+        .container-basis {
+       
+         flex-wrap: wrap;
+        }
+        .item-basis-100 {
+           flex-basis: 200px;
+           flex-grow: 1;
+            background-color: #b53737;
+        }
+        .item-basis-200 {
+            background-color: #5a67d8;
+        }
+    </style>
+</head>
+<body>
+    <h2>Flex-grow Example </h2>
+    <h3>It take remain space equaly </h3>
+    <div class="container container-grow">
+        <div class="item item-grow-1">Flex-grow: 1</div>
+        <div class="item item-grow-2">Flex-grow: 2</div>
+    </div>
+
+    <!-- <h2>Flex-shrink Example</h2>
+    <h3>Want to make responsive </h3>
+    <div class="container container-shrink">
+        <div class="item item-shrink-1">Flex-shrink: 1</div>
+        <div class="item item-shrink-3">Flex-shrink: 3</div>
+    </div> -->
+
+    <!-- <h2>Flex-basis Example</h2>
+    <h3>It take width as maximum width for child</h3>
+    <div class="container container-basis">
+        <div class="item item-basis-100">Flex-basis: 100px</div>
+        <div class="item item-basis-200">Flex-basis: 200px</div>
+    </div> -->
+</body>
+</html>

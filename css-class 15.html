@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Demonstration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+   
+        .demo-container {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .demo-container div,
+        .demo-container a,
+        .demo-container input,
+        .demo-container select,
+        .demo-container textarea {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+   
+        div:first-child {
+            background-color: #ffcccb;
+        }
+
+     
+        div:last-child {
+            background-color: #ffe4b5;
+        }
+
+     
+        div:nth-child(2) {
+            background-color: #d3ffd3;
+        }
+
+
+        div:nth-last-child(2) {
+            background-color: #add8e6;
+        }
+
+     
+        div:nth-of-type(2) {
+            border: 2px dashed #6a5acd;
+        }
+
+       
+        div:only-child {
+            border: 2px solid #ffa500;
+        }
+
+
+        div:only-of-type {
+            border: 2px solid #40e0d0;
+        }
+
+      
+        div:first-of-type {
+            background-color: #f5deb3;
+        }
+
+ 
+        div:last-of-type {
+            background-color: #deb887;
+        }
+
+    
+        div:empty {
+            background-color: #98fb98;
+            height: 50px;
+        }
+
+     
+        div:not(.highlight) {
+            border: 2px solid #ff4500;
+        }
+
+ 
+        a:link {
+            color: #0000ff;
+        }
+
+    
+        a:visited {
+            color: #551a8b;
+        }
+
+
+        a:hover {
+            color: #ff6347;
+        }
+
+  
+        a:active {
+            color: #ff0000;
+        }
+
+      
+        input:focus, textarea:focus {
+            border-color: #4682b4;
+        }
+
+       
+        input:checked + label {
+            font-weight: bold;
+        }
+
+     
+        input:disabled + label {
+            color: #dcdcdc;
+        }
+
+   
+        input:enabled + label {
+            color: #000000;
+        }
+
+        
+        input:required {
+            border: 2px solid #dc143c;
+        }
+
+  
+        input:optional {
+            border: 2px solid #0000cd;
+        }
+
+      
+        input:in-range {
+            border: 2px solid #8a2be2;
+        }
+
+      
+        input:out-of-range {
+            border: 2px solid #ff4500;
+        }
+
+    
+        input:valid {
+            border: 2px solid #228b22;
+        }
+
+        input:invalid {
+            border: 2px solid #ff0000;
+        }
+        input:default + label {
+            font-weight: bold;
+        }
+
+        :root {
+            --main-bg-color: #e6e6fa;
+        }
+
+        body {
+            background-color: var(--main-bg-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="demo-container">
+    <h3>:first-child and :last-child</h3>
+    <div>First child</div>
+    <div>Middle child</div>
+    <div>Last child</div>
+
+    <h3>:nth-child(n) and :nth-last-child(n)</h3>
+    <div>1st child</div>
+    <div>2nd child (nth-child(2))</div>
+    <div>3rd child</div>
+    <div>2nd last child (nth-last-child(2))</div>
+    <div>Last child</div>
+
+    <h3>:only-child and :only-of-type</h3>
+    <div>Only child</div>
+    <div>Another element</div>
+    <div>Another element</div>
+
+    <h3>:first-of-type and :last-of-type</h3>
+    <div>First of type</div>
+    <div>Middle of type</div>
+    <div>Last of type</div>
+
+    <h3>:empty</h3>
+    <div>Not empty</div>
+    <div class="highlight"></div>
+
+    <h3>:not()</h3>
+    <div>Not highlighted</div>
+    <div class="highlight">Highlighted</div>
+
+    <h3>:link, :visited, :hover, :active</h3>
+    <a href="#">Link</a>
+    <a href="#" class="visited">Visited</a>
+
+    <h3>:focus</h3>
+    <input type="text" placeholder="Focus on me">
+    <textarea placeholder="Focus on me"></textarea>
+
+    <h3>:checked, :disabled, :enabled, :required, :optional</h3>
+    <input type="checkbox" id="checkbox" checked>
+    <label for="checkbox">Checked</label>
+    <br>
+    <input type="checkbox" id="disabled-checkbox" disabled>
+    <label for="disabled-checkbox">Disabled</label>
+    <br>
+    <input type="text" required placeholder="Required field">
+    <input type="text" placeholder="Optional field">
+
+    <h3>:in-range, :out-of-range</h3>
+    <input type="number" min="1" max="10" value="5" placeholder="In range">
+    <input type="number" min="1" max="10" value="15" placeholder="Out of range">
+
+    <h3>:valid and :invalid</h3>
+    <input type="email" placeholder="Valid email">
+    <input type="text" pattern="[A-Za-z]{3}" placeholder="Invalid pattern">
+
+    <h3>:default</h3>
+    <input type="radio" name="group" id="default-radio" checked>
+    <label for="default-radio">Default selected</label>
+
+    <h3>:root</h3>
+    <div>The root element controls the background color using a custom property.</div>
+</div>
+
+</body>
+</html>

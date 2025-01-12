@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Demonstration</title>
+    <style>
+        .container {
+            width: 35%;
+            height: 200px;
+            margin: 20px auto;
+            border: 1px solid brown;
+            display: flex;
+            position: relative;
+
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+        .item1 { background-color: brown; }
+        .item2 { background-color: rgb(45, 193, 101); }
+        .item3 { background-color: rgb(112, 76, 220); }
+        .item4 { background-color: rgb(198, 136, 136); }
+        .item5 { background-color: rgb(222, 21, 21); }
+        .item6 { background-color: rgb(50, 44, 44); }
+
+        /* Specific flexbox configurations */
+        .flex-row { flex-direction: row; }
+        .flex-row-reverse { flex-direction: row-reverse; }
+        .flex-column { flex-direction: column; }
+        .flex-column-reverse { flex-direction: column-reverse; }
+
+        .nowrap { flex-wrap: nowrap; }
+        .wrap { flex-wrap: wrap; }
+        .wrap-reverse { flex-wrap: wrap-reverse; }
+
+        .justify-start { justify-content: flex-start; }
+        .justify-end { justify-content: flex-end; }
+        .justify-center { justify-content: center; }
+        .justify-around { justify-content: space-around; }
+        .justify-between { justify-content: space-between; }
+        .justify-evenly { justify-content: space-evenly; }
+
+        .align-start { align-items: flex-start; }
+        .align-end { align-items: flex-end; }
+        .align-center { align-items: center; }
+        .align-stretch { align-items: stretch; }
+        .align-baseline { align-items: baseline; }
+
+        .align-content-start { align-content: flex-start;
+        flex-flow:  wrap; }
+        .align-content-end { align-content: flex-end;
+            flex-flow:  wrap; }
+        .align-content-center { align-content: center;
+            flex-flow:  wrap; }
+        .align-content-stretch { align-content: stretch;
+            flex-flow:  wrap; }
+        .align-content-around { align-content: space-around;
+            flex-flow:  wrap; }
+        .align-content-between { align-content: space-between;
+            flex-flow:  wrap; }
+        .align-content-evenly { align-content: space-evenly;
+            flex-flow:  wrap; }
+
+        .self-start { align-self: flex-start; }
+        .self-end { align-self: flex-end; }
+        .self-center { align-self: center; }
+        .self-stretch { align-self: stretch; }
+        .self-baseline { align-self: baseline; }
+    </style>
+</head>
+<body>
+
+    <!-- Flex Direction Examples -->
+    <!-- <h3>Flex Direction: Row</h3>
+    <div class="container flex-row">
+        <div class="item item1">Row</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <h3>Flex Direction: Row Reverse</h3>
+    <div class="container flex-row-reverse">
+        <div class="item item1">Row Reverse</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+     <!-- <h3>Flex Direction: Column</h3>
+    <div class="container flex-column">
+        <div class="item item1">Column</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <h3>Flex Direction: Column Reverse</h3>
+    <div class="container flex-column-reverse">
+        <div class="item item1">Column Reverse</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+
+    <!-- Flex Wrap Examples -->
+    <!-- <h3>Flex Wrap: No Wrap</h3>
+    <div class="container flex-row nowrap">
+        <div class="item item1">Nowrap</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+    <!-- <h3>Flex Wrap: Wrap</h3>
+    <div class="container flex-row wrap">
+        <div class="item item1">Wrap</div>
+        <div class="item item2">Item-1</div>
+        <div class="item item3">Item-2</div>
+        <div class="item item4">Item-3</div>
+        <div class="item item5">Item-4</div>
+        <div class="item item6">Item-5</div>
+    </div> -->
+    <!-- <h3>Flex Wrap: Wrap Reverse</h3>
+    <div class="container flex-row wrap-reverse">
+        <div class="item item1">Wrap Reverse</div>
+        <div class="item item2">Item 1</div>
+        <div class="item item3">Item 2</div>
+        <div class="item item4">Item 3</div>
+        <div class="item item5">Item 4</div>
+        <div class="item item6">Item 5</div>
+    </div> -->
+
+    <!-- Justify Content Examples
+    <h3>Justify Content: Start</h3>
+    <div class="container justify-start">
+        <div class="item item1">Start</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <h3>Justify Content: End</h3>
+    <div class="container justify-end">
+        <div class="item item1">End</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Justify Content: Center</h3>
+    <div class="container justify-center">
+        <div class="item item1">Center</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <h3>Justify Content: Space Around</h3>
+    <div class="container justify-around">
+        <div class="item item1">Around</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Justify Content: Space Between</h3>
+    <div class="container justify-between">
+        <div class="item item1">Between</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Justify Content: Space Evenly</h3>
+    <div class="container justify-evenly">
+        <div class="item item1">Evenly</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+
+    <!-- Align Items Examples -->
+    <!-- <h3>Align Items: Start</h3>
+    <div class="container align-start" style="height: 300px;">
+        <div class="item item1">Start</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Align Items: End</h3>
+    <div class="container align-end" style="height: 300px;">
+        <div class="item item1">End</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Align Items: Center</h3>
+    <div class="container align-center" style="height: 300px;">
+        <div class="item item1">Center</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Align Items: Stretch</h3>
+    <div class="container align-stretch" style="height: 300px;">
+        <div class="item item1">Stretch</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+    <!-- <h3>Align Items: Baseline</h3>
+    <div class="container align-baseline" style="height: 300px;">
+        <div class="item item1" style="line-height: 40px;">Baseline</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div> -->
+
+    <!-- Align Content Examples -->
+     <!-- <h3>Align Content: Start</h3>
+   <div class="container flex-wrap align-content-start" style="height: 400px;">
+        <div class="item item1">Start</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+    <!-- <h3>Align Content: End</h3>
+    <div class="container flex-wrap align-content-end" style="height: 400px;">
+        <div class="item item1">End</div>
+        <div class="item item2">Item- 1</div>
+        <div class="item item3">Item-2</div>
+        <div class="item item4">Item 3</div>
+        <div class="item item5">Item 4</div>
+        <div class="item item6">Item 5</div>
+    </div> -->
+    <!-- <h3>Align Content: Center</h3>
+    <div class="container flex-wrap align-content-center" style="height: 400px;">
+        <div class="item item1">Center</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+    <!-- <h3>Align Content: Stretch</h3>
+    <div class="container flex-wrap align-content-stretch" style="height: 400px;">
+        <div class="item item1">Stretch</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+    <!-- <h3>Align Content: Space Around</h3>
+    <div class="container flex-wrap align-content-around" style="height: 400px;">
+        <div class="item item1">Around</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+    <!-- <h3>Align Content: Space Between</h3>
+    <div class="container flex-wrap align-content-between" style="height: 400px;">
+        <div class="item item1">Between</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+    <!-- <h3>Align Content: Space Evenly</h3>
+    <div class="container flex-wrap align-content-evenly" style="height: 400px;">
+        <div class="item item1">Evenly</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+        <div class="item item4">Item</div>
+        <div class="item item5">Item</div>
+        <div class="item item6">Item</div>
+    </div> -->
+
+    <!-- Align Self Examples -->
+    <!-- <h3>Align Self: Different Values</h3>
+    <div class="container align-stretch" style="height: 300px;">
+        <div class="item item1 self-start">Self Start</div>
+        <div class="item item2 self-end">Self End</div>
+        <div class="item item3 self-center">Self Center</div>
+        <div class="item item4 self-stretch">Self Stretch</div>
+        <div class="item item5 self-baseline" style="line-height: 40px;">Self Baseline</div>
+        <div class="item item5 self-baseline" style="line-height: 80px;">Self Baseline</div>
+    </div> -->
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 500px;
+      height: 600px;
+      border: 1px solid brown;
+    }
+    
+    img {
+      width: 100px;
+      height: 100px;
+      
+    }
+
+    /* p {
+      user-select: none;
+    }
+
+    /* Adjacent sibling selector */
+    /* .box1 + p {
+      color: brown;
+    } */
+
+    /* General sibling selector */
+    /* .box1 ~ p {
+      font-style: italic;
+    } */
+    [alt$="Descriptive"] {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="image/img.jpg" alt="Descriptive text for the image">
+    <img src="https://techsabrii.com/img/icon/logo.png" alt="ts-developers" >
+    <img src="image/img.jpg" alt="ts-developers en-sg  Descriptive">
+  </div>
+
+  <a href="https://techsabrii.com" style="font-size: medium;">techsabrii.com</a>
+
+  <p>jljcai ajjfgkldsbf,s cn efhelda jyesfgjj dkurrj jabffkssgg</p>
+
+  <div class="box1">
+    <p style="font-size: medium;">This is an introductory paragraph describing the list below:</p>
+    <ul>
+      <li>
+        <p>Item 1: This is the first item in the list, providing some details about it.</p>
+      </li>
+      <li>
+        <p>Item 2: Here we have the second item, which elaborates on a different aspect.</p>
+      </li>
+      <li>
+        <p>Item 3: The third item introduces another point related to the topic.</p>
+      </li>
+      <li>
+        <p>Item 4: Lastly, this fourth item concludes the list with a final thought.</p>
+      </li>
+    </ul> 
+  </div>
+
+  <p style="font-size: medium;">This paragraph will be styled with the general sibling selector.</p>
+  <p>This paragraph will be styled with the general sibling selector.</p>
+  <p>This paragraph will be styled with the general sibling selector.</p>
+  
+</body>
+</html>
