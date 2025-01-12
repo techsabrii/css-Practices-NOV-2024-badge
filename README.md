@@ -1,6 +1,6 @@
 # Web Development Course - HTML Badge (NOV 2024)
 
-Welcome to the **HTML Badge** repository for the **Web Development Course** (NOV 2024). This repository contains all the HTML-related classes, exercises, and templates that I created during the course. As a **Full Stack Developer** working at **TS-Developers** at [TechSabrii](https://techsabrii.com), this repository showcases my learning journey and work from the course.
+Welcome to the **CSS Badge** repository for the **Web Development Course** (NOV 2024). This repository contains all the HTML-related classes, exercises, and templates that I created during the course. As a **Full Stack Developer** working at **TS-Developers** at [TechSabrii](https://techsabrii.com), this repository showcases my learning journey and work from the course.
 
 ---
 
