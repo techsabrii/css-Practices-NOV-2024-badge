@@ -1,0 +1,94 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,auto) ;
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas: "st1 st1 st1 st1"
+                         "st2 st2 st2 st2"
+                         "st3 st3 st3 st5"
+                         "st4 st4 st4 st5"
+                         "st6 st6 st6 st6"
+                         "st7 st7 st7 st7"
+                         ;
+
+}
+.di {
+    text-align: center;
+    font-size: 40px;
+}
+.st1 {
+    background-color: blue;
+    height: 80px;
+    grid-area: st1;
+}
+.st2 {
+    background-color: red;
+    grid-area: st2;
+}
+.st3 {
+    background-color: green;
+    grid-area: st3;
+}
+.st4 {
+    background-color: yellow;
+    grid-area: st4;
+    height:400px;
+}
+.st5 {
+    background-color: orange;
+    grid-area: st5;
+}
+.st6 {
+    background-color: purple;
+    grid-area: st6;
+}
+.st7 {
+    background-color: pink;
+    grid-area: st7;
+}
+.st8 {
+    background-color: brown;
+    grid-area: st8;
+}
+
+@media screen and (max-width:768px){
+
+    .container {
+    display: grid;
+    grid-template-columns: repeat(3,auto) ;
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas: "st1 st1  st1"
+                         "st2 st2  st2"
+                         "st3 st3  st5"
+                         "st4 st4  st5"
+                         "st6 st6  st6"
+                         "st7 st7  st7"
+                         ;
+
+}
+}
+
+@media screen and (max-width:576px){
+
+    .container {
+    display: grid;
+    grid-template-columns: repeat(2,auto) ;
+    grid-template-rows: repeat(9, auto);
+    grid-template-areas: "st1 st1  "
+                         "st2 st2  "
+                         "st3 st3  "
+                         "st4 st4  "
+                         "st5 st5  "
+                         "st6 st6  "
+                         "st7 st7  "
+                         ;
+
+}
+
+.st7 {
+    background-color: rgb(48, 29, 29);
+    grid-area: st7;
+}
+
+
+}
+

@@ -1,0 +1,330 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Flip Card</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bolder;
+      color: green;
+    }
+
+    .container {
+      width: 250px;
+      height: 200px;
+      perspective: 1000px; /* Enables 3D space */
+    }
+
+    .test {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .container:hover .test {
+      transform: rotateY(180deg);
+    }
+
+    .commn {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .front {
+      background-color: blue;
+    }
+
+    .back {
+      background-color: yellow;
+      color: black;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="test">
+      <div class="commn front">Front Div</div>
+      <div class="commn back">Back Div</div>
+    </div>
+  </div>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Fit Example</title>
+  <style>
+    .con {
+      width: 600px;
+      height: 300px;
+      border: 1px solid brown;
+      overflow: hidden; /* prevents overflow */
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* this is where it belongs */
+    }
+    p{
+      user-select: all;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="con">
+    <img src="image/img.jpg" alt="Example image">
+  </div>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, ad? Libero natus similique blanditiis quis quas quo quasi ipsum iusto possimus in. Voluptatem, mollitia doloremque ipsa dicta repellat earum dolor.</p>
+</body>
+
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All CSS Pseudo-Classes Example</title>
+  <style>
+    /* Structural Pseudo-classes */
+    .list li:first-child {
+      color: red;
+    }
+
+    .list li:last-child {
+      color: green;
+      font-weight: bolder;
+    }
+
+    .list li:nth-child(2) {
+      font-weight: bold;
+    }
+
+    .list li:nth-last-child(2) {
+      text-decoration: underline;
+      color: brown;
+       font-weight: bold;
+    }
+
+    .list li:nth-of-type(odd) {
+      background: #ee0606;
+    }
+
+    .list li:only-child {
+      border: 2px dashed rgb(105, 9, 105);
+
+    }
+
+    .list li:only-of-type {
+      font-style: italic;
+    }
+
+    .list li:first-of-type {
+      border-bottom: 2px solid black;
+    }
+
+    .list li:last-of-type {
+      border-top: 2px solid black;
+    }
+
+    .empty-div:empty {
+      background: yellow;
+      height: 30px;
+    }
+
+    /* UI States */
+    a:link {
+      color: rgb(140, 241, 18);
+    }
+
+    a:visited {
+      color: rgb(255, 72, 0);
+    }
+
+    a:hover {
+      background: lightblue;
+    }
+
+    a:active {
+      font-size: 28px;
+    }
+
+
+    input:focus {
+      outline: 2px solid red;
+
+      box-shadow: 2px 2px 4px 4px brown;
+    }
+
+    input:checked  {
+      color: darkgreen;
+      background-color: rgb(12, 251, 12);
+    }
+
+    input:disabled {
+      border: 2px solid rgb(246, 165, 15);
+    }
+
+    input:enabled {
+      border: 2px solid blue;
+    }
+
+    input:required {
+      border: 2px solid orange;
+    }
+
+    input:optional {
+      background: #e0ffe0;
+    }
+
+    input:in-range {
+      background: lightgreen;
+    }
+
+    input:out-of-range {
+      background: rgb(243, 12, 12);
+    }
+
+    input:read-only {
+      background: #eee;
+    }
+
+    input:read-write {
+      background: white;
+    }
+
+    input:valid {
+      border: 2px solid green;
+    }
+
+    input:invalid {
+      border: 2px solid red;
+    }
+
+    input:default {
+      border: 2px dashed blue;
+    }
+
+    /* Logical and language */
+    p:not(.exclude) {
+      color: darkblue;
+    }
+
+    p:lang(en) {
+      font-weight: bold;
+    }
+
+    /* Target */
+    .target-box:target {
+      background-color: gold;
+      padding: 10px;
+      border: 2px solid green;
+    }
+
+    /* Root */
+    :root {
+      --main-color: #008080;
+    }
+
+    body {
+      font-family: Arial;
+      color: var(--main-color);
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>:first-child, :last-child, :nth-child(), etc.</h2>
+  <ul class="list">
+    <li>Item 1 (first-child, first-of-type)</li>
+    <li>Item 2 (nth-child(2))</li>
+    <li>Item 3</li>
+    <li>Item 4 (last-child, last-of-type)</li>
+  </ul>
+
+  <h2>:only-child</h2>
+  <ul class="list">
+    <li>I'm the only child</li>
+  </ul>
+
+  <h2>:empty</h2>
+  <div class="empty-div"></div>
+
+  <h2>:link, :visited, :hover, :active</h2>
+  <a href="#target1">Click or hover me</a>
+
+  <h2>:focus, :checked, :disabled, :enabled, etc.</h2>
+  <form>
+    <input type="text" placeholder="Focus me">
+    <br><br>
+
+    <input type="checkbox" id="chk1" checked>
+    <label for="chk1">I'm checked</label>
+    <br><br>
+
+    <input type="text" disabled placeholder="Disabled">
+    <input type="text" placeholder="Enabled">
+    <br><br>
+
+    <input type="text" required placeholder="Required">
+    <input type="text" placeholder="Optional">
+    <br><br>
+
+    <input type="number" min="1" max="10" value="5">
+    <input type="number" min="1" max="10" value="20">
+    <br><br>
+
+    <input type="text" readonly value="Read Only">
+    <input type="text" value="Editable">
+    <br><br>
+
+    <input type="email" value="invalid email">
+    <br><br>
+
+    <input type="radio" name="choice" checked>
+    <label>Default</label>
+  </form>
+
+  <h2>:not(), :lang()</h2>
+  <p lang="en">This is English text</p>
+  <p class="exclude">Excluded from :not()</p>
+  <p>Included in :not()</p>
+
+  <h2>:target</h2>
+  <a href="#target1">Go to Target Box</a>
+  <div id="target1" class="target-box">You're inside the target!</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D Flip Card</title>
+  <style>
+    * {
+      font-size: 24px;
+    }
+
+    .container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(9, 100px);
+      grid-template-areas: "header header header links"
+        "header header header links"
+        "main main sidebar links"
+        "main main testi testi"
+      ;
+
+
+    }
+
+    .header {
+      background-color: blueviolet;
+      grid-area: header;
+    }
+
+    .links {
+      background-color: rgb(124, 192, 15);
+      grid-area: links;
+    }
+
+    .main {
+      background-color: rgb(49, 4, 91);
+      grid-area: main;
+    }
+
+    .sidebar {
+      background-color: rgb(241, 2, 2);
+      grid-area: sidebar;
+    }
+
+    .testi {
+      background-color: rgb(241, 2, 2);
+      grid-area: testi;
+    }
+
+    .item {}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header item">
+      header
+    </div>
+    <div class="links item"> Links</div>
+    <div class="main item">Main Area</div>
+    <div class="sidebar item">Side bar</div>
+    <div class="testi item">Testimonial</div>
+  </div>
+
+
+</body>
+
+</html>
