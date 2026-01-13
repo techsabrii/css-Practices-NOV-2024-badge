@@ -6,35 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        * {
+        :root{
+            --font-size:24px;
+        }
+        *{
             margin: 0;
             padding: 0;
         }
-
-        :root {
-            --my-background: rgb(248, 172, 6);
-            --my-fontcolor: rgb(239, 0, 0);
-            --font-weight:bolder;
-        }
-
-        div {
-            width: 50vmin;
-            height: 50vmin;
-            background-color: var(--my-background);
-            overflow: hidden;
-            resize: both;
-            cursor: grab;
-            color: var(--my-fontcolor);
-            font-weight: var(--font-weight);
-
+        div{
+            width: calc(50vw * 2 - 22px );
+            height: 25vh;
+            padding: 10px;
+            border: 1px solid brown;
+            font-size: var(--font-size);
+            cursor:grab;
         }
     </style>
 </head>
 
 <body>
     <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere esse modi qui beatae quaerat, nihil maiores enim
-        cumque harum reprehenderit hic voluptate, porro pariatur amet fugiat accusantium, at eligendi distinctio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cupiditate eligendi minus voluptatem esse
+        voluptate exercitationem dolorum quidem quisquam, quibusdam corrupti? Nulla corporis libero vero perferendis
+        odit. Et, sint quis.
     </div>
 
 </body>

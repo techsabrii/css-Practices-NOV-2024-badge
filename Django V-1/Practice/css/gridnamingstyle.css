@@ -1,0 +1,90 @@
+* {
+    border: 1px solid white;
+}
+
+.main-body {
+    font-size: 34px;
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header aside"
+        "main main main aside"
+        "section section section section"
+        "footer footer footer footer";
+    /* grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "main main main main"
+        "aside aside aside aside"
+        "section section section section"
+        "footer footer footer footer";
+        */
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.nav>div {
+    background-color: darkblue;
+    color: aliceblue;
+    height: 80px;
+    display: grid;
+    grid-template-areas:
+        "nav-1 nav-2 nav-3 nav-4";
+}
+
+.nav>div>.nav-1 {
+    grid-area: nav-1;
+}
+
+.nav>div>.nav-2 {
+    grid-area: nav-2;
+}
+
+.nav>div>.nav-3 {
+    grid-area: nav-3;
+}
+
+.nav>div>.nav-4 {
+    grid-area: nav-4;
+}
+
+
+header {
+    background-color: blueviolet;
+    color: aliceblue;
+    grid-area: header;
+}
+
+main {
+    background-color: chocolate;
+    color: aliceblue;
+    grid-area: main;
+    height: 400px;
+}
+
+aside {
+    background-color: darkcyan;
+    color: aliceblue;
+    grid-area: aside;
+}
+
+section {
+    background-color: darkkhaki;
+    color: black;
+    grid-area: section;
+    height: 200px;
+    column-count: 3;
+    padding: 30px;
+    font-size: 20px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    grid-area: footer;
+}
